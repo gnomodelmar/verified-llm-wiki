@@ -2,6 +2,12 @@
 
 *English: [README.md](README.md)*
 
+> **Esta versión** se basa en [Loren292/verified-llm-wiki](https://github.com/Loren292/verified-llm-wiki) y se mejora desde los proyectos de Tomás con Claude.
+>
+> - Reglas para las sesiones de Claude: [CLAUDE-WIKI.md](CLAUDE-WIKI.md).
+> - Cambios respecto del original: [MEJORAS.md](MEJORAS.md).
+> - Instalación en cada computadora: `setup.ps1` (Windows) o `setup.sh` (Mac/Linux).
+
 Una extensión del patrón [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 de Andrej Karpathy. Leé primero su archivo de idea: este se apoya en él. Como el original, es un
 archivo de idea. Se lo pegás a tu agente y arman juntos tu versión. El repo trae además una

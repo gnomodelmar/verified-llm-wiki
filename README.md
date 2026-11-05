@@ -2,6 +2,12 @@
 
 *Español: [README.es.md](README.es.md)*
 
+> **This version** is based on [Loren292/verified-llm-wiki](https://github.com/Loren292/verified-llm-wiki) and is improved from Tomás's projects with Claude.
+>
+> - Rules for Claude sessions (in Spanish): [CLAUDE-WIKI.md](CLAUDE-WIKI.md).
+> - Changes from the original: [MEJORAS.md](MEJORAS.md).
+> - Per-computer install: `setup.ps1` (Windows) or `setup.sh` (Mac/Linux).
+
 An extension of Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 pattern. Read his idea file first: this one builds on it. Like the original, this is an idea file.
 Paste it to your agent and build your own version together. The repo also ships a template, a
