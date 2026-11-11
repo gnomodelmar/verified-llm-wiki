@@ -53,3 +53,9 @@ Origin: pedido de Tomás del 05/11/2026, que quiere que todas sus sesiones, en t
 - Si `upstream` tiene novedades (`git fetch upstream`, `git log main..upstream/main`), avisale a Tomás y preguntá si las incorpora.
 - Si Tomás tiene cambios sin commitear en la copia local, no los pises. Preguntá primero.
 - Si la copia local no existe en esta computadora, decile a Tomás que corra `setup.ps1` (Windows) o `setup.sh` (Mac/Linux) del repo.
+
+## 5. Candidatos (vistos en un solo proyecto)
+
+Lecciones que todavía no son regla: pasaron en un proyecto y esperan a repetirse en otro. Si en tu sesión pasa lo mismo, avisale a Tomás y proponé convertirla en regla (sección 3), citando los dos casos. Si se vuelve regla, se borra de acá.
+
+- **Código con barras invertidas: editarlo con la herramienta de edición, no desde la consola.** En Windows con Git Bash, un heredoc o un `python -c` que escribe código perdió las barras (`\d`, `\n`, `\.`) y dejó regex y textos rotos; lo atraparon las pruebas después. En la misma sesión, escribir con Python en modo texto pasó archivos de LF a CRLF y rompió una prueba que comparaba saltos de línea. Visto 3 veces en NexoLM el 11/11/2026.
