@@ -113,6 +113,11 @@ Every decision has two separate states, decided and executed. "Executed" require
 the ground truth (a diff, a measured value, a snapshot), not from the wiki itself. Confusing the
 two was the most repeated error in the project this came from.
 
+The same goes for tests: passing against a simulator or a mock is not evidence that something
+works on the real system. A flow can pass every local test and still be rejected by the real
+platform on its first message. The template's rule 8 asks to say which checks ran on the real
+system and which only on the stand-in.
+
 Numbering keeps things apart:
 
 | | What it is |

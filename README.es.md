@@ -115,6 +115,11 @@ Cada decisión tiene dos estados separados, decidida y ejecutada. "Ejecutada" pi
 dato real (una diferencia, un valor medido, una foto), no de la wiki misma. Confundir los dos fue
 el error más repetido del proyecto de donde sale esto.
 
+Lo mismo vale para las pruebas: pasar contra un simulador o una imitación no es evidencia de que
+algo funcione en el sistema real. Un flujo puede pasar todas las pruebas locales y que la
+plataforma real lo rechace con el primer mensaje. La regla 8 de la plantilla pide decir qué
+controles corrieron en el sistema real y cuáles solo en el reemplazo.
+
 La numeración separa las cosas:
 
 | | Qué es |

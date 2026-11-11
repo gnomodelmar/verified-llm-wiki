@@ -74,6 +74,13 @@ stops being followed, so a new rule is added only with the error that caused it.
 7. **Every item one role leaves for another is answered or passed on, one by one.**
    *Origin: a reviewer's observation never reached the writer and the same mistake was repeated
    three times; a writer's warning about an ambiguous word got no answer and the word stayed.*
+8. **A test against a simulator or a mock is not a test on the real system.** Nothing that will
+   run on an external platform (an automation tool, an API, a hosting service) counts as working
+   until it has run there at least once, end to end. Say which checks ran on the real system and
+   which only on the stand-in.
+   *Origin: every test of a flow passed in a hand-written simulator of the automation tool, but
+   the real tool rejected the flow on its first real message because of a rule the simulator
+   did not know; the platform also needed two settings that no local test could see.*
 
 ## 5 · The cycle of a work item
 
