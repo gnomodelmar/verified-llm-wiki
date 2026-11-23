@@ -82,6 +82,15 @@ stops being followed, so a new rule is added only with the error that caused it.
    *Origin: every test of a flow passed in a hand-written simulator of the automation tool, but
    the real tool rejected the flow on its first real message because of a rule the simulator
    did not know; the platform also needed two settings that no local test could see.*
+9. **Code with backslashes or exact line endings is written with the edit tool, not from the
+   shell.** A heredoc, an inline `python -c` or a shell string that carries code can drop
+   backslashes or turn them into real characters (`\d`, `\n`, `\r`), and on Windows a text-mode
+   write can switch LF to CRLF. Write the file with the edit tool (or have a script read the text
+   from a file), then run the tests.
+   *Origin: in one project, code written from the shell lost the backslashes of its regexes three
+   times in one session, and a text-mode write switched line endings and broke a test. In another
+   project, a `\r\n` meant as text became a real line break inside a generated PowerShell script
+   and broke the step that ran it.*
 
 ## 5 · The cycle of a work item
 
