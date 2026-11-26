@@ -242,9 +242,10 @@ Entonces:
 Una tarea que pide criterio nunca se automatiza: un script que decide parece seguro y no lo es.
 
 Los scripts se escriben con la herramienta de edición, no desde la consola. Un heredoc o un
-`python -c` pueden perder o transformar en silencio las barras invertidas (`\d`, `\n`, `\r`) y los
-saltos de línea; pasó en dos proyectos, una vez rompiendo expresiones regulares y otra un script
-generado. Lo cubre la regla 9 de la plantilla.
+`python -c` pueden perder o transformar en silencio las barras invertidas (`\d`, `\n`, `\r`), los
+saltos de línea y los caracteres que no son ASCII, como los emojis; pasó en tres proyectos, que
+rompieron expresiones regulares, un script generado y un reemplazo que no encontró nada. Lo cubre
+la regla 9 de la plantilla.
 
 **Agentes (roles).** Vale la pena crear un rol nuevo cuando un tipo de trabajo vuelve seguido y
 pide una postura que el chat principal no puede tener: leer en frío, escribir solo desde datos

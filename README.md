@@ -239,8 +239,9 @@ Then:
 A task that needs judgment is never automated: a script that decides looks certain and isn't.
 
 Scripts are written with the edit tool, not from the shell. A heredoc or an inline `python -c`
-can silently drop or transform backslashes (`\d`, `\n`, `\r`) and line endings; it happened in two
-projects, once breaking regexes and once a generated script. The template's rule 9 covers it.
+can silently drop or transform backslashes (`\d`, `\n`, `\r`), line endings and non-ASCII
+characters such as emoji; it happened in three projects, breaking regexes, a generated script and
+a find-and-replace that matched nothing. The template's rule 9 covers it.
 
 **Agents (roles).** A new role is worth creating when a kind of work keeps coming back and needs a
 stance the main chat can't have: reading cold, writing only from measured facts, keeping a map

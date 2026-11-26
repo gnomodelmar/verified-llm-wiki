@@ -82,15 +82,17 @@ stops being followed, so a new rule is added only with the error that caused it.
    *Origin: every test of a flow passed in a hand-written simulator of the automation tool, but
    the real tool rejected the flow on its first real message because of a rule the simulator
    did not know; the platform also needed two settings that no local test could see.*
-9. **Code with backslashes or exact line endings is written with the edit tool, not from the
-   shell.** A heredoc, an inline `python -c` or a shell string that carries code can drop
-   backslashes or turn them into real characters (`\d`, `\n`, `\r`), and on Windows a text-mode
-   write can switch LF to CRLF. Write the file with the edit tool (or have a script read the text
-   from a file), then run the tests.
+9. **Code with backslashes, exact line endings or non-ASCII characters is written with the edit
+   tool, not from the shell.** A heredoc, an inline `python -c` or a shell string that carries
+   code can drop backslashes or turn them into real characters (`\d`, `\n`, `\r`), on Windows a
+   text-mode write can switch LF to CRLF, and text piped through the console can change its
+   encoding, so emoji or accented characters no longer match the file. Write or change the file
+   with the edit tool (or have a script read the text from a file), then check the result.
    *Origin: in one project, code written from the shell lost the backslashes of its regexes three
    times in one session, and a text-mode write switched line endings and broke a test. In another
    project, a `\r\n` meant as text became a real line break inside a generated PowerShell script
-   and broke the step that ran it.*
+   and broke the step that ran it. In a third, a find-and-replace sent through a heredoc to Python
+   did not find its emoji in the file; nothing was saved, but the log already said it had been.*
 
 ## 5 · The cycle of a work item
 
